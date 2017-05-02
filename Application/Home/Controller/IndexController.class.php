@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-use Org\Util;
+use Org\Util\Wecaht;
 class IndexController extends BaseController {
     public function __construct(){
         parent::__construct();
