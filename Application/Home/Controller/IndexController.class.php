@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-use Org\Util\Wecaht;
+use Org\Util\Wechat;
 class IndexController extends BaseController {
     public function __construct(){
         parent::__construct();
@@ -11,7 +11,7 @@ class IndexController extends BaseController {
     }
 
     public function test(){
-        $wechat = new Wecaht();
+        $wechat = new Wechat();
         $wechat->test();
         echo 3;die;
     }
