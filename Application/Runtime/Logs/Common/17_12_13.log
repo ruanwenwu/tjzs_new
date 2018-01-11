@@ -1,6 +1,0 @@
-[ 2017-12-13T22:03:44+08:00 ] 140.205.201.45 /index.php?m=wap&a=index&siteid=1
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
-ERR: 无法加载模块:Wap
-

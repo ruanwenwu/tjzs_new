@@ -602,6 +602,8 @@ class ApiController extends Controller{
         $this->syncDocPicInfo();
         //同步医生简介
         $this->suplementDocInfo();
+        //同步医生排序
+        $this->alterOrdinaryOrder();
         //同步排班信息
         $this->syncVisitReal();
         //停掉停了的医生的出诊
@@ -717,6 +719,21 @@ class ApiController extends Controller{
         $res = M("suplement_doc_bref")->select();
         foreach ($res as $re){
             $sql = "update zs_docanddep set introduction = '{$re['bref']}' where docid = '{$re['docid']}'";
+            M()->execute($sql);
+        }
+    }
+    
+    /**
+     * 修正普通号的顺序
+     */
+    public function alterOrdinaryOrder(){
+        $docids = array(
+            "48093cf0-29b8-4d2b-9f02-6e216cbeae50",
+            "66e3d5dc-a64b-4ed3-9a0c-61f4b8a8c5fe",
+        );
+        
+        foreach ($docids as $id){
+            $sql = "update zs_docanddep set ordernum = 120 where docid = '$id'";
             M()->execute($sql);
         }
     }
