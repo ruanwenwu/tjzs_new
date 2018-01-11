@@ -14,7 +14,7 @@ class ApiController extends Controller{
     }*/
 
     //获取权限
-    public function getPermitionParams($force=false){
+    public function getPermitionParams($force=true){
         $accessInfo = S("accessInfo");
    
         if ($accessInfo && !$force) {   
@@ -31,6 +31,7 @@ class ApiController extends Controller{
             'Content-type:application/x-www-form-urlencoded',
         );
         $res = httpPostRequest($url,$data,$header);
+
         $res = json_decode($res,true);
         if ($res['result'] == "00000000"){
             $expireTime = $_SERVER['REQUEST_TIME'] + $res['data']['expires_in'] - 300;
@@ -122,8 +123,8 @@ class ApiController extends Controller{
                     $insertSql .= "('{$hv['tpid']}','{$hv['hid']}','{$val['DeptID']}','{$val['DeptName']}',{$val['IsEnabled']},{$_SERVER['REQUEST_TIME']},'{$val['BranchName']}','{$val['OrderNum']}','{$branchType}'),";
                 }
             } else {
-                //var_dump($res);
-                //die;
+                var_dump($res);
+                die;
             }
         }
         $insertSql = rtrim($insertSql,",");       
@@ -151,7 +152,7 @@ class ApiController extends Controller{
             $header = array(
                 'Content-type:application/x-www-form-urlencoded',
                 'Authorization:'.$accessTokenInfo['token_type']." ".$accessTokenInfo['access_token'],
-            );       
+            );          
             $res = json_decode(httpPostRequest($url,$data,$header),true);           
             if ($res['result'] == "00000000" && $res['data']['total'] > 0){     //如果数据正常,
                 foreach ($res['data']['rows'] as $key => $val){
@@ -170,8 +171,8 @@ class ApiController extends Controller{
     //同步医生科室关系
     public function syncDocDepRelation(){
         //清空原来的数据     
-        /*$sql = "truncate zs_docanddep";
-        M("docanddep")->execute($sql);*/
+        $sql = "truncate zs_docanddep";
+        M("docanddep")->execute($sql);
         $accessTokenInfo = $this->getPermitionParams();
         $url = self::API_HOST."api/sync/doctoranddept";
         //获得医院信息
@@ -193,7 +194,7 @@ class ApiController extends Controller{
             if ($res['result'] == "00000000" && $res['data']['total'] > 0){     //如果数据正常,
                 foreach ($res['data']['rows'] as $key => $val){
                     $insertSql .= "('{$hv['tpid']}','{$hv['hid']}','{$val['DeptID']}','{$val['DocID']}',{$val['IsEnabled']},{$_SERVER['REQUEST_TIME']},'{$val['Specialty']}','{$val['OrderNum']}','{$val['Introduction']}'),";
-                }
+                }  
             } else {
                 var_dump($res);
                 die;
@@ -245,7 +246,10 @@ class ApiController extends Controller{
     public function syncVisitReal(){
         //清空原来的数据     
         //$sql = "truncate zs_visitreal";
-        //M("visitreal")->execute($sql);  
+        //M("visitreal")->execute($sql);
+        $nowDay = date("Y-m-d");
+        $sql = "delete from zs_visitreal where visitdate > '$nowDay'";
+        M("visitreal")->execute($sql);
         $accessTokenInfo = $this->getPermitionParams();
         $url = self::API_HOST."api/sync/visitreal";               
         //获得医院信息
@@ -283,7 +287,8 @@ class ApiController extends Controller{
         }
         if ($goon) {
             $insertSql = rtrim($insertSql,",");
-            //echo $insertSql;die;  
+            $nowtime = time();
+            $insertSql .= " on duplicate key update updatetime = '$nowtime'";
             M("department")->execute($insertSql);
             //记录日志
             M("visittype_sync_log")->add(array("date"=>array_pop($days)));
@@ -297,10 +302,10 @@ class ApiController extends Controller{
     //获得需要同步的日期
     public function getNeedSyncVisitTypeDays(){
         $today = date("Y-m-d");
-        $sevenDaysLater = date("Y-m-d",strtotime("+7 days"));
+        $sevenDaysLater = date("Y-m-d",strtotime("+8 days"));
         //获得日志表里最后一条记录
         $res = M("visittype_sync_log")->order("id desc")->find();
-        if ($res) {
+        if ($res && false) {
             $lastDate = $res['date'];
         } else {
             $lastDate = $today;
@@ -490,16 +495,13 @@ class ApiController extends Controller{
             $res = json_decode(httpPostRequest($url,$data,$header),true);
             if ($res['result'] == "00000000" && $res['data']['total'] > 0){
                 foreach ($res['data']['rows'] as $re) {
-                    if ($re['ChangeType'] == 0 || $re['ChangeType'] == 1) {
-                        //如果是开或者关，直接更新状态
-                        M("visitreal")->where(array("realid"=>$re['RealID']))->save(array('isenabled'=>$re['ChangeType']));
-                        if ($re['ChangeType'] == 0){
-                            //如果是停诊，那么对预约了这些号的要发送消息
-                        }
-                    } else if ($re['ChangeType'] == 2) {
+                    
+                    $exist = M("visitreal")->where(array("realid"=>$re['RealID']))->find();
+                    if ($exist) {
+                        M("visitreal")->where(array("realid"=>$re['RealID']))->save(array('isenabled'=>$re['IsEnabled']));
+                    } else {
                         //如果是新增，添加到visitreal表中
                         //看realchange表中是否存在
-                        if(!M("realchange")->find(array("realid"=>$re['RealID']))){
                             $data = array(
                                 "tpid"     =>  $hospitalInfo['tpid'],
                                 "hid"      =>  $hospitalInfo['hid'],
@@ -514,8 +516,7 @@ class ApiController extends Controller{
                             );
                             M("visitreal")->add($data);
                             $sql = "insert into zs_realchange (`realid`,`changetype`,`date`) values ('{$re['RealID']}','{$re['ChangeType']}','{$data['visitdate']}') ";
-                            M("realchange")->query($sql);
-                       }
+                            M("realchange")->execute($sql);
                     }      
                 }
             }else{
@@ -595,8 +596,12 @@ class ApiController extends Controller{
         $this->syncDoctorsInfo();
         //同步医生和科室关系
         $this->syncDocDepRelation();
+        //同步不显示的医生
+        $this->checkIfWhiteOrdinary();
         //同步医生图片
         $this->syncDocPicInfo();
+        //同步医生简介
+        $this->suplementDocInfo();
         //同步排班信息
         $this->syncVisitReal();
         //停掉停了的医生的出诊
@@ -605,6 +610,7 @@ class ApiController extends Controller{
         $this->syncSevendaysAvailable();
         //同步每天排班信息
         $this->syncEverydayAvailable();
+        
     }
     
     public function tt(){
@@ -634,5 +640,86 @@ class ApiController extends Controller{
         }
         echo $insertSql;die;
     }
+
+    //获取可是简介
+    public function getDeptBrief(){
+        //读取文件
+        $depts = file("/data/wwwroot/tjzsyl/depbrief.csv");
+        if ($depts && is_array($depts)){
+            foreach ($depts as $dep){
+                $tempData = explode(",",$dep);
+                $deptname = trim($tempData[1]);
+                $data['brief']  = $tempData[2];
+                $deptInfo = M("department")->where(array("deptname"=>$deptname))->find();
+                if ($deptInfo){
+                    $data['name']   = $deptInfo['deptname'];
+                    $data['deptid'] = $deptInfo['deptid'];
+                    M("department_brief_two")->add($data);
+                }
+            }
+        }
+        die;
+    }
+    
+    ///删除重复数据
+    public function delRepeatData(){
+        $sql = "select id,count(realid) as c,realid from zs_visitreal group by realid having c > 1";
+        $res = M()->query($sql);
+
+        if ($res){
+            $delIds = "";
+            foreach ($res as $re){
+                $id = $re['id'];
+                $delIds .= $id.",";
+            }
+            $delIds = rtrim($delIds,",");
+            M("visitreal")->delete($delIds);
+        }
+        die;
+    }
+    
+    //普通号白名单,只有这些普通号医生能显示
+    public function checkIfWhiteOrdinary(){
+        $deptWhite = array(
+            "824c51a2-6728-4682-a1ca-547c89c8d275",//北院推拿
+            "a9bbc5ee-3eeb-4515-8f0e-862c50d451a0",//北院肿瘤
+            "1f777950-9363-4296-a554-d64ac0a35018",//北心身
+            "15f43627-fda1-46a3-a93a-689f0ee79c88",//北口腔
+            "8c486d8b-74df-4ac5-9aae-eb1efb033966",//南院心身
+        );
+        $docWhite = array(
+            "6accc1f5-60e3-4dda-bd63-d8086f6d47df", //北院腰颈损伤荣兵
+            "62e02cec-6775-4da2-8a9a-d36a388a9dd6", //北院腰颈损伤林向前
+            "f538239a-9391-4381-b811-664d405572b0", //北院关节软伤，刘波
+            "3227d3e7-d91a-42cf-8754-efc5b993d65b", //南院口腔科
+        );
+        
+        //查询含有普通名称的医生，将他们根据白名单进行disabled掉
+        $sql = "select d.docid,r.deptid from zs_doctor as d,zs_docanddep as r where r.docid = d.docid and d.doctorname like '%普通号';";
+        $res = M()->query($sql);
+        foreach ($res as $re){
+            if (in_array($re['docid'],$docWhite) || in_array($re['deptid'], $deptWhite)){
+                //
+            }else{
+                $sql = "update zs_doctor set isenabled = 0 where docid = '{$re['docid']}'";
+                M()->execute($sql);
+            }
+        }
+    }
+    
+    /**
+     * 补充医生简介
+     * @author rww
+     * @date 2017/01/09
+     */
+    public function suplementDocInfo(){
+        //查询所有的补充信息，然后填充到doc表
+        $res = M("suplement_doc_bref")->select();
+        foreach ($res as $re){
+            $sql = "update zs_docanddep set introduction = '{$re['bref']}' where docid = '{$re['docid']}'";
+            M()->execute($sql);
+        }
+    }
+    
 }
 ?>

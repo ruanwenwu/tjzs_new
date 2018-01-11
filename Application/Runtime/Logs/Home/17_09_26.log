@@ -1,0 +1,93 @@
+[ 2017-09-26T23:53:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0005s ]
+SQL: truncate zs_hospital [ RunTime:0.0542s ]
+SQL: INSERT INTO `zs_hospital` (`tpid`,`mtime`,`hid`,`hospitalname`) VALUES ('87c6024c-4d5b-4bff-9aa8-68f7bce38938','1506441181','f3be0033-5684-476c-929c-09021cf857ff','天津中医药大学一附院') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-09-26T23:54:02+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0006s ]
+SQL: truncate zs_hospital [ RunTime:0.0330s ]
+SQL: INSERT INTO `zs_hospital` (`tpid`,`mtime`,`hid`,`hospitalname`) VALUES ('87c6024c-4d5b-4bff-9aa8-68f7bce38938','1506441241','f3be0033-5684-476c-929c-09021cf857ff','天津中医药大学一附院') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000407s ]
+
+[ 2017-09-26T23:55:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0006s ]
+SQL: truncate zs_hospital [ RunTime:0.0370s ]
+SQL: INSERT INTO `zs_hospital` (`tpid`,`mtime`,`hid`,`hospitalname`) VALUES ('87c6024c-4d5b-4bff-9aa8-68f7bce38938','1506441301','f3be0033-5684-476c-929c-09021cf857ff','天津中医药大学一附院') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-09-26T23:56:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0006s ]
+SQL: truncate zs_hospital [ RunTime:0.0504s ]
+SQL: INSERT INTO `zs_hospital` (`tpid`,`mtime`,`hid`,`hospitalname`) VALUES ('87c6024c-4d5b-4bff-9aa8-68f7bce38938','1506441361','f3be0033-5684-476c-929c-09021cf857ff','天津中医药大学一附院') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000347s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-09-26T23:57:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0005s ]
+SQL: truncate zs_hospital [ RunTime:0.0400s ]
+
+[ 2017-09-26T23:58:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0006s ]
+SQL: truncate zs_hospital [ RunTime:0.0385s ]
+
+[ 2017-09-26T23:59:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncHospitalInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_hospital` [ RunTime:0.0006s ]
+SQL: truncate zs_hospital [ RunTime:0.0526s ]
+

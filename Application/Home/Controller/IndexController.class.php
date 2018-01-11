@@ -9,7 +9,7 @@ class IndexController extends BaseController {
     public function index(){
         header("Content-type:text/html;charset=utf-8");
         //如果非白名单用户，直接输出模板
-        if(!in_array($this->userInfo['id'],array(10,52,12,14,54,11,57,20))){
+        if(!in_array($this->userInfo['id'],array(10,61,52,12,14,18,19,54,11,57,20,22,60))){
             $this->display("maintaining");
             die;
         }
@@ -148,11 +148,17 @@ class IndexController extends BaseController {
                     $xia[] = $visit;
                 }
             }
-
+            
+            
+  
             //usort
             usort($shang,'sortbyorder');
             usort($xia,'sortbyorder');
         
+            if ($_GET['debug']){
+                echo '<pre>';
+                var_dump($shang);die;
+            }
             $this->assign("shang",$shang);
             $this->assign("xia",$xia);
             $this->assign("visitInfo",$visits);
@@ -164,13 +170,24 @@ class IndexController extends BaseController {
         $this->display(); 
     }
 
+    //医院介绍
+    public function hospitalInfo(){
+        $hid = I("get.hid");
+        if (!$hid) $hid = 'f3be0033-5684-476c-929c-09021cf857ff';
+        $res = M("hospital_brief")->where(array("hid"=>$hid))->find();
+        $this->assign("hospital", $res);
+        $this->display();
+    }
+
     //医生时段信息
     public function timespan(){
         //如果时间不在7:00-17:00
-        if (date("G") < 7 || date("G") > 17){
+        $start = strtotime(date("Y-m-d")." 07:00:00");
+        $end   = strtotime(date("Y-m-d")." 16:45:00");
+        $now   = time();
+        if ($now < $start || $now > $end){
             $this->display("passtime");
             die;
-            
         }
         $realid = I("get.visitid"); //注意，这个接的是主键id
         //通过realid获得hid,tpid和realid
@@ -350,6 +367,49 @@ class IndexController extends BaseController {
             "4.违约处罚，1个月爽约3次将取消当月预约资格。",
         );
         $this->assign("guahao",$guahao);
+        $this->display();
+    }
+
+    /**
+     * 乘车路线
+     * @author rww
+     */
+    public function busPath(){
+        $this->display();
+    }
+
+    /**
+     * 科室简介列表
+     */
+    public function departBriefList(){
+        $dep = I("get.depname");
+        $branchType = I("get.branchtype");
+        //$where = array("isenabled"=>1);
+        
+        
+        
+        if ($dep) {
+            $erwhere = "deptname like '%$dep%'";
+        }
+        
+        $statusWhere = array("isenabled"=>1,"servendays"=>1);
+        if ($branchType) {
+            $statusWhere['branchtype'] = $branchType;
+        }
+        $departments = M("department")->where($erwhere)->where($statusWhere)->order(array("ordernum"=>"asc"))->select();
+        $this->assign("departments",$departments);
+        $this->display();
+    }
+
+    /**
+     * 简介详情
+     */
+    public function departBriefDetail(){
+        $id = I("get.id");
+        $content = M("department_brief_two")->where(array("deptid"=>$id))->find();
+        $content['brief'] = preg_replace("/^\s+/", "", $content['brief']);
+        $content['brief'] = preg_replace("/\s{2,}/", "</p><p>", trim($content['brief']));
+        $this->assign("deptInfo", $content);
         $this->display();
     }
 

@@ -1,0 +1,112 @@
+<extend name="Public:base" />
+<block name="css">
+ <link rel="stylesheet" href="http://validform.rjboy.cn/wp-content/themes/validform/style.css" type="text/css" media="all" />
+</block>
+<block name="body">
+<div class="row">
+        <div class="col-lg-12">
+        <section class="panel">
+
+            <div class="panel-body">
+                <form id="xxx" class="form-horizontal adminex-form registerform" method="post" action="/manage/index.php?c=index&a=modifyDoctor">
+                 	<div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">ID</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" value="<{$doctorInfo['id']}>" id="disabledInput" nullmsg="请输入id！" datatype="s1-8" errormsg="id为1-8个数字" type="text" name="id" placeholder="<{$doctorInfo['id']}>" readonly>
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" value="<{$doctorInfo['name']}>"  class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="text"  value="<{$doctorInfo['age']}>"  name="address" class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">性别</label>
+                        <div class="col-lg-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sex" id="optionsRadios1" value="1" <if condition="$doctorInfo['sex'] eq 1">checked</if>>
+                                    男
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="sex" id="optionsRadios2" value="0" <if condition="$doctorInfo['sex'] eq 0">checked</if>>
+                                    女
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">状态</label>
+                        <div class="col-lg-10">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="status" id="optionsRadios1" value="1" <if condition="$doctorInfo['status'] eq 1">checked</if>>
+                                    在线
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="status" id="optionsRadios2" value="0" <if condition="$doctorInfo['status'] eq 0">checked</if>>
+                                    下线
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">职称</label>
+                        <div class="col-sm-10">
+                            <input type="text" nullmsg="请输入职务" value="<{$doctorInfo['title_name']}>" datatype="*" errormsg="输入正确的职称" name="title_name" class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">简介</label>
+                        <div class="col-sm-10">
+                            <textarea name="bref"  class="form-control"><{$doctorInfo['bref']}></textarea>
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputFile1" class="col-lg-2 col-sm-2 control-label">头像</label>
+                        <div class="col-lg-10">
+                        <input type="file" t="icon" name="icon" id="exampleInputFile1">
+                        <input id="icond" type="hidden" value="<{$doctorInfo['pic']}>"  name="pic" />
+                        <p class="help-block Validform_checktip">tip：将展示在列表以及其他页面</p>
+                        <div id="icon-preview"><if condition="$doctorInfo['pic'] == ''">暂未上传<else/><img src="/Uploads/<{$doctorInfo['pic']}>" /></if></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                        	
+                       
+                            <button type="submit" class="btn btn-primary">修改</button>
+                        </div>
+                    </div>
+      		
+                </form>
+            </div>
+        </section>
+     </div>
+ </div>
+</block>
+<block name="js">
+<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.3.2/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/tjzsyl/index.js?<{$random}>"></script>
+</block>

@@ -1,0 +1,3 @@
+<?php
+//000000001499a:6:{s:12:"access_token";s:363:"6QM3HVaI4UiKLcP34VKKDSHZNa227Wl0zYdFSsaqk1l79KlRD1nAxmb_q8-6kBuwK_xthz065HV-9riV4a_OO90AUjcrK97X5JAcOx08Yb0YV_ZmDid2y0NHxKFpJP5Uvka6t3VR-dk6xowle7JBqS94l8krTbAW4sotGjTfRBGwmugDgixZ2GV-UE96ggZytDmA3Yq0v7KJCJeeBUj9XQDZpN9-xCfSlJ1oOEIHjtlP9athTA3fANaOkwzTcs3ktpqsUWpu7Ui_RtUL7f_6XWCxuRFuf7baaf54Or_02WX5V1mI9AtC0EhVD87RIlsOwZak14UbLrLLqF0wbYnrW--AHxkIs7ybr7ic7kZAzuo";s:10:"token_type";s:6:"bearer";s:10:"expires_in";i:1799;s:4:"TPID";s:36:"87c6024c-4d5b-4bff-9aa8-68f7bce38938";s:7:".issued";s:29:"Thu, 11 Jan 2018 05:35:47 GMT";s:8:".expires";s:29:"Thu, 11 Jan 2018 06:05:47 GMT";}
+?>

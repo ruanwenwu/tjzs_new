@@ -1,0 +1,1108 @@
+[ 2017-11-23T00:27:08+08:00 ] 101.201.153.208 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T04:01:01+08:00 ] 101.200.168.135 /index.php/Home/Api/syncEveryDay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+NOTIC: [8] Undefined index: username /data/wwwroot/tjzsyl/Application/Home/Controller/ApiController.class.php 第 10 行.
+NOTIC: [8] Undefined index: password /data/wwwroot/tjzsyl/Application/Home/Controller/ApiController.class.php 第 11 行.
+
+[ 2017-11-23T04:26:04+08:00 ] 106.11.227.203 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T07:00:43+08:00 ] 175.20.88.178 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:13:34+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2017-11-23T09:13:37+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2017-11-23T09:13:37+08:00 ] 111.30.142.78 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:13:37+08:00 ] 125.39.46.46 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:13:40+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-11-23T09:13:40+08:00 ] 111.30.142.78 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:13:51+08:00 ] 121.51.32.144 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:15:07+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-11-23T09:15:11+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
+[ 2017-11-23T09:15:16+08:00 ] 121.51.32.144 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:15:49+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2017-11-23T09:16:34+08:00 ] 101.226.66.174 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:21:31+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2017-11-23T09:21:33+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-11-23T09:21:36+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-11-23T09:21:43+08:00 ] 120.204.17.70 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:22:28+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-25' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-11-23T09:22:38+08:00 ] 120.204.17.73 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T09:24:13+08:00 ] 101.226.66.174 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:31:28+08:00 ] 124.95.152.52 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0009s ]
+
+[ 2017-11-23T09:32:26+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2017-11-23T09:32:26+08:00 ] 111.30.142.78 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:32:30+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-11-23T09:32:32+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-11-23T09:32:47+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-25' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-11-23T09:32:50+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2017-11-23T09:32:51+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-25' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2017-11-23T09:32:59+08:00 ] 120.204.17.70 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:36:11+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000409s ]
+
+[ 2017-11-23T09:36:13+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-11-23T09:36:14+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2017-11-23T09:36:17+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-25' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('694a92b4-0fcc-4cd4-8e97-4a6f02e9ce1b','961d5c52-9e19-4abf-8bdb-792f0c3c9011','9176054c-1cdc-47b4-af89-1e39f015fba0','443d1b69-017b-47b6-9606-c2ba803f3ccf','6fc84776-2873-4055-8c84-c21f32be27ae','ccd6df9c-16c7-43fe-a5a0-ca1d391887b3','79678d88-c365-475c-90d0-6524c988c58e','8d2d90df-9b07-4ef9-a589-77d2d87dada5','bf6d3123-42d4-4477-8eb4-f410bfba665f','f6cdbed9-0370-4171-8e07-6f142dcaecf0','7a542902-2bb6-4e1d-9798-3d2ec6557eb3','00b66597-a8a0-4155-943d-31998baa9690') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010643s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+
+[ 2017-11-23T09:36:18+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-26' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('6c08262b-b83d-44be-9b1e-24ec7f08454a','c95f73ad-a0f2-4863-acb9-27225219055f','4abb555d-64de-4a73-a897-b4f24791924a','11085122-1a4a-4355-ac8c-ca0157981200') ) AND `isenabled` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('6c08262b-b83d-44be-9b1e-24ec7f08454a','c95f73ad-a0f2-4863-acb9-27225219055f','4abb555d-64de-4a73-a897-b4f24791924a','11085122-1a4a-4355-ac8c-ca0157981200') ) AND `isenabled` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0003s ]
+NOTIC: [2] usort() expects parameter 1 to be array, null given /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 154 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-11-23T09:36:28+08:00 ] 183.192.201.97 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-26
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T09:37:15+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-27' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('61dd10e1-42ef-4fb8-9346-07c56ce8b13f','bf6be4b1-3ab3-4550-ade0-5d3e80753acc','60598db5-8ea6-4c27-a2d0-642ed58b973d','d911ee2e-60e2-4416-98ea-f937ff595497','a3bf57e4-046e-4f8d-93f8-9f24b224f421','befefc12-f7ca-46cf-b067-34650b89e8b7') ) AND `isenabled` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('61dd10e1-42ef-4fb8-9346-07c56ce8b13f','bf6be4b1-3ab3-4550-ade0-5d3e80753acc','60598db5-8ea6-4c27-a2d0-642ed58b973d','d911ee2e-60e2-4416-98ea-f937ff595497','a3bf57e4-046e-4f8d-93f8-9f24b224f421','befefc12-f7ca-46cf-b067-34650b89e8b7') ) AND `isenabled` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2017-11-23T09:37:25+08:00 ] 120.204.17.69 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T09:37:58+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-28' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('b6540aa9-9a8a-4aeb-addb-a0107bb7570c','00c92cf0-a8b8-4e7d-810b-25ac11026f42','8d2d90df-9b07-4ef9-a589-77d2d87dada5','c142e738-61e6-4c49-ae01-ab56e70dc53f','3a6aaf3f-bb09-4a99-b130-5a6a50d6aeb6','fc7b5d14-5132-4d84-9388-70aade10e27c','8dd71449-f510-4ef2-ae4c-2360b0bf730a','72b5e833-3356-4e82-857e-1da1d434cf62') ) AND `isenabled` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('b6540aa9-9a8a-4aeb-addb-a0107bb7570c','00c92cf0-a8b8-4e7d-810b-25ac11026f42','8d2d90df-9b07-4ef9-a589-77d2d87dada5','c142e738-61e6-4c49-ae01-ab56e70dc53f','3a6aaf3f-bb09-4a99-b130-5a6a50d6aeb6','fc7b5d14-5132-4d84-9388-70aade10e27c','8dd71449-f510-4ef2-ae4c-2360b0bf730a','72b5e833-3356-4e82-857e-1da1d434cf62') ) AND `isenabled` = 1  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2017-11-23T09:38:08+08:00 ] 121.51.32.144 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T09:39:54+08:00 ] 101.226.66.174 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351/date/2017-11-27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T10:48:16+08:00 ] 123.151.77.123 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_yuan` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `zs_yuan` WHERE `hid` = 1 ORDER BY enabled desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2017-11-23T10:48:16+08:00 ] 123.151.77.74 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T10:48:16+08:00 ] 111.30.142.227 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T10:48:17+08:00 ] 123.151.77.123 /index.php/Home/Index/departlist/branchtype/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: erwhere /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 41 行.
+SQL: SELECT * FROM `zs_department` WHERE `isenabled` = 1 AND `servendays` = 1 AND `branchtype` = 1 ORDER BY `ordernum` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-11-23T10:48:19+08:00 ] 123.151.77.123 /index.php/Home/Index/departmentArrange/deptid/8f5b4b93-8888-463e-b3e9-010ec7280351
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_user` WHERE `openid` = 'o4d8FwrbRbasZV2X6PkuIM83fAKg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_deptdayavl` [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant status - assumed 'status' /data/wwwroot/tjzsyl/Application/Home/Controller/IndexController.class.php 第 58 行.
+SQL: SELECT * FROM `zs_deptdayavl` WHERE ( date >= '2017-11-24' and date <= '2017-11-30' ) AND `status` = 1 AND `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' GROUP BY date  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_department` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_department` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visitreal` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visitreal` WHERE `deptid` = '8f5b4b93-8888-463e-b3e9-010ec7280351' AND `visitdate` = '2017-11-24' AND `isenabled` = 1 LIMIT 20   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_doctor` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_doctor` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_docanddep` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_docanddep` WHERE ( docid in ('f96d5108-b370-4845-8eaf-ed3891736db4','f53efea4-4312-4684-a643-1dca0c746983','befefc12-f7ca-46cf-b067-34650b89e8b7','c142e738-61e6-4c49-ae01-ab56e70dc53f','6005932b-7d3b-4f44-8c7f-a28f5cbc0837','61dd10e1-42ef-4fb8-9346-07c56ce8b13f') ) AND `isenabled` = 1  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `zs_visittype` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zs_visittype` WHERE ( visittypeid in ('77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d','efde1e58-f449-4fc7-9697-fe893bb42ae3','77928a94-e433-4c01-8cd4-cd341b376b3d','77928a94-e433-4c01-8cd4-cd341b376b3d') )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2017-11-23T13:32:40+08:00 ] 66.249.73.134 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T13:47:05+08:00 ] 219.243.212.239 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T15:11:46+08:00 ] 66.249.73.134 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0007s ]
+
+[ 2017-11-23T20:44:39+08:00 ] 183.136.190.62 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+
+[ 2017-11-23T20:46:26+08:00 ] 202.108.211.56 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /data/wwwroot/tjzsyl/ThinkPHP/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `zs_user` [ RunTime:0.0006s ]
+

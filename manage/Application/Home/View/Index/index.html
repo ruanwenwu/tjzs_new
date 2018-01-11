@@ -1,0 +1,97 @@
+<extend name="Public:base" />
+<block name="css">
+ <link rel="stylesheet" href="http://validform.rjboy.cn/wp-content/themes/validform/style.css" type="text/css" media="all" />
+</block>
+<block name="body">
+<div class="row">
+        <div class="col-lg-12">
+        <section class="panel">
+
+            <div class="panel-body">
+                <form id="xxx" class="form-horizontal adminex-form registerform" method="post" action="/manage/index.php?c=index&a=updateHospital">
+                 	<div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">ID</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" value="<{$hospitalInfo['id']}>" id="disabledInput" nullmsg="请输入id！" datatype="n1-8" errormsg="id为1-8个数字" type="text" name="id" placeholder="13" readonly>
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" value="<{$hospitalInfo['name']}>" nullmsg="请输入医院名称！" datatype="s4-18" errormsg="至少4个字符,最多18个字符！"  class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">地址</label>
+                        <div class="col-sm-10">
+                            <input type="text" nullmsg="请输入地址！" value="<{$hospitalInfo['address']}>" datatype="s6-100" errormsg="地址至少个字符,最多100个字符！" name="address" class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">电话</label>
+                        <div class="col-sm-10">
+                            <input type="text" nullmsg="请输入电话！" value="<{$hospitalInfo['tel']}>" datatype="*" errormsg="输入正确的电话" name="tel" class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">网址</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<{$hospitalInfo['website']}>"  name="website" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">乘车路线</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="traffic" value="<{$hospitalInfo['traffic']}>" class="form-control">
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">简介</label>
+                        <div class="col-sm-10">
+                            <textarea name="desc" nullmsg="请输入简介！" datatype="*" errormsg="简介至少6个字符,最多500个字符！" class="form-control"><{$hospitalInfo['desc']}></textarea>
+                            <p class="help-block Validform_checktip"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="exampleInputFile1" class="col-lg-2 col-sm-2 control-label">图标</label>
+                        <div class="col-lg-10">
+                        <input type="file" t="icon" name="icon" id="exampleInputFile1">
+                        <input id="icond" type="hidden" value="<{$hospitalInfo['icon']}>" nullmsg="请上传医院icon！" datatype="*" errormsg="icon不能为空" name="icon" />
+                        <p class="help-block Validform_checktip">将展示在列表以及其他页面</p>
+                        <div id="icon-preview"><img src="/Uploads/<{$hospitalInfo['icon']}>" /></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile2" class="col-lg-2 col-sm-2 control-label">海报</label>
+                        <div class="col-lg-10">
+                        <input type="file" t="poster"  name="poster" id="exampleInputFile2">
+                        <input id="posterd" nullmsg="请上传医院海报！" value="<{$hospitalInfo['icon']}>" errormsg="海报不能为空" datatype="*" type="hidden" name="poster" />
+                        <p class="help-block Validform_checktip">将展示在医院介绍页面</p>
+                          <div id="poster-preview"><img src="/Uploads/<{$hospitalInfo['poster']}>" /></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                        	
+                       
+                            <button type="submit" class="btn btn-primary">修改</button>
+                        </div>
+                    </div>
+      		
+                </form>
+            </div>
+        </section>
+     </div>
+ </div>
+</block>
+<block name="js">
+<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.3.2/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/tjzsyl/index.js?<{$random}>"></script>
+</block>

@@ -1,0 +1,8 @@
+array(3) {
+  ["result"]=>
+  string(186) "01at CMIT.AppQy.Service.Controllers.LoginController.Login(UserBindingModel userBinding) in D:\PDD_TFS\患者版\Trunk\Source\QYSTransfer\ThirdParty\Controllers\LoginController.cs:line 46"
+  ["message"]=>
+  string(48) "没有找到此授权码所对应的医院信息"
+  ["data"]=>
+  NULL
+}

@@ -1,0 +1,90 @@
+[ 2017-10-17T02:00:06+08:00 ] 140.205.225.191 /index.php?m=member&c=index&a=register&siteid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+ERR: 无法加载模块:Member
+
+[ 2017-10-17T02:00:07+08:00 ] 140.205.225.191 /index.php?m=wap&a=index&siteid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+ERR: 无法加载模块:Wap
+
+[ 2017-10-17T11:13:52+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/Tjgh/feedback/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:01+08:00 ] 117.185.27.114 /index.php?s=/addon/Tjgh/Tjgh/feedback/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:04+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/PatientCard/index/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:07+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/Attention/index/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:14+08:00 ] 117.185.27.114 /index.php?s=/addon/Tjgh/PatientCard/index/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:16+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/Tjgh/myappointment/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:19+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/Tjgh/hospitaldetail/hid/1/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:33+08:00 ] 111.200.217.146 /index.php?s=/addon/Tjgh/Tjgh/departmentlist/hid/1/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:14:43+08:00 ] 117.185.27.114 /index.php?s=/addon/Tjgh/Tjgh/departmentlist/hid/1/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:18:29+08:00 ] 180.153.160.24 /index.php?s=/addon/Tjgh/PatientCard/index/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:18:58+08:00 ] 117.185.27.114 /index.php?s=/addon/Tjgh/Tjgh/departmentlist/hid/1/publicid/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+ERR: 无法加载模块:Addon
+
+[ 2017-10-17T11:55:06+08:00 ] 140.205.225.204 /index.php?m=member&c=index&a=register&siteid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+ERR: 无法加载模块:Member
+
+[ 2017-10-17T11:55:08+08:00 ] 140.205.225.204 /index.php?m=wap&a=index&siteid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+ERR: 无法加载模块:Wap
+

@@ -1,0 +1,59 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>天津中医药大学第一附属医院</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/black/pace-theme-big-counter.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.bootcss.com/weui/0.4.0/style/weui.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="/app/css/weui1.css" rel="stylesheet">
+	<link rel="stylesheet" href="/Public/jqueryweui/dist/lib/weui.css">
+	<!--<link rel="stylesheet" href="/Public/node_modules/weui/dist/lib/weui.css">-->
+	<link rel="stylesheet" href="/Public/jqueryweui/dist/css/jquery-weui.css">
+<link href="/app/css/timespan.css" rel="stylesheet">
+<style>
+.cb{padding:10px 10px 50px 10px;text-align:justify}
+.cb p{line-height:30px;margin-top:15px;}
+.btn{
+	width: 40%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: none;
+    border: none;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+}
+.dark{
+	background:rgb(89, 107, 134);
+}
+.yellow{
+	background:orange;
+}
+.float_bottom{
+	text-align:center;
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+</style>
+</head>
+<body>
+<div class="cb">
+	<?php echo ($hospital['brief']); ?>
+</div>
+<div class="float_bottom">
+	<input onclick="location.href='/index.php/Home/Index/departBriefList'" type="button" class="btn dark" value="查看科室" />
+	<input onclick="location.href='/index.php/Home/Index/busPath'" type="button" class="btn yellow" value="查看路线" />
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<extend name="Public:base" />
+<block name="css">
+ <link rel="stylesheet" href="http://validform.rjboy.cn/wp-content/themes/validform/style.css" type="text/css" media="all" />
+</block>
+<block name="body">
+<div class="row">
+            <div class="col-sm-12">
+                <section class="panel">
+                    <div class="panel-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>用户</th>
+                                <th>ְ挂号id</th>
+                                <th>挂号信息</th>
+                                <th>挂号时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <foreach name="data" item="vo">
+                            <tr>
+                                <td><{$vo['id']}></td>
+                                <td><{$vo['uid']}></td>
+                                <td><{$vo['sid']}></td>
+                                <td><{$vo['errinfo']}></td>
+                                <td><{:date("Y-m-d H:is",$vo['ctime'])}></td>
+                               
+                            </tr>
+                          	</foreach>
+                            </tbody>
+                        </table>
+                        <{$page}>
+                    </div>
+                </section>
+            </div>
+          </div>
+</block>
+<block name="js">
+<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.3.2/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/tjzsyl/index.js?<{$random}>"></script>
+</block>
