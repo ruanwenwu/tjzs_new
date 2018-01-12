@@ -407,8 +407,8 @@ class IndexController extends BaseController {
     public function departBriefDetail(){
         $id = I("get.id");
         $content = M("department_brief_two")->where(array("deptid"=>$id))->find();
-        $content['brief'] = preg_replace("/^\s+/", "", $content['brief']);
-        $content['brief'] = preg_replace("/\s{2,}/", "</p><p>", trim($content['brief']));
+        //$content['brief'] = preg_replace("/^\s+/", "", $content['brief']);
+        //$content['brief'] = preg_replace("/\s{2,}/", "</p><p>", trim($content['brief']));
         $this->assign("deptInfo", $content);
         $this->display();
     }
