@@ -32,7 +32,7 @@ function sortbyorder($a,$b){
         return -1;
     } else if ($a['ordernum'] > $b['ordernum']){
         return 1;
-    } else{
+    } else{      
         return 0;
     }
 }

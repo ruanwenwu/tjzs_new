@@ -694,14 +694,16 @@ class ApiController extends Controller{
             "62e02cec-6775-4da2-8a9a-d36a388a9dd6", //北院腰颈损伤林向前
             "f538239a-9391-4381-b811-664d405572b0", //北院关节软伤，刘波
             "3227d3e7-d91a-42cf-8754-efc5b993d65b", //南院口腔科
+            //"c92b580a-7cda-404f-8643-e1d5700490e5",//北院肿瘤赵林林
+            "ea3ccee7-24f9-44fb-801f-d469bf6a872c"//北院肿瘤赵林林
         );
         
         //查询含有普通名称的医生，将他们根据白名单进行disabled掉
         $sql = "select d.docid,r.deptid from zs_doctor as d,zs_docanddep as r where r.docid = d.docid and d.doctorname like '%普通号';";
         $res = M()->query($sql);
         foreach ($res as $re){
+            //$re['deptid'] = 'a9bbc5ee-3eeb-4515-8f0e-862c50d451a0';
             if (in_array($re['docid'],$docWhite) || in_array($re['deptid'], $deptWhite)){
-                //
             }else{
                 $sql = "update zs_doctor set isenabled = 0 where docid = '{$re['docid']}'";
                 M()->execute($sql);
@@ -728,12 +730,18 @@ class ApiController extends Controller{
      */
     public function alterOrdinaryOrder(){
         $docids = array(
-            "48093cf0-29b8-4d2b-9f02-6e216cbeae50",
-            "66e3d5dc-a64b-4ed3-9a0c-61f4b8a8c5fe",
+            array("docid"=>"48093cf0-29b8-4d2b-9f02-6e216cbeae50","deptid"=>"1f777950-9363-4296-a554-d64ac0a35018","order"=>120),
+            array("docid"=>"66e3d5dc-a64b-4ed3-9a0c-61f4b8a8c5fe","deptid"=>"1f777950-9363-4296-a554-d64ac0a35018","order"=>120),
+            array("docid"=>"098d66c5-c209-4b86-8961-d93baddc4c57","deptid"=>"dbb12165-5a03-4faa-b307-3865c3b0e133","order"=>5),
+            array("docid"=>"45686db3-2956-435c-b729-52ad3ff10318","deptid"=>"23acf6f8-ee79-44ff-8f37-9d151b31c4e7","order"=>11),
+            array("docid"=>"553b6ad1-5204-4864-a55d-75e26c3e28ff","deptid"=>"80e01028-0c8f-4d31-ad61-adab1da095ec","order"=>3),
         );
         
-        foreach ($docids as $id){
-            $sql = "update zs_docanddep set ordernum = 120 where docid = '$id'";
+        foreach ($docids as $did){
+            $docid = $did['docid'];
+            $deptid= $did['deptid'];
+            $order = $did['order'];
+            $sql = "update zs_docanddep set ordernum = '$order' where docid = '$docid' and deptid = '$deptid'";
             M()->execute($sql);
         }
     }
