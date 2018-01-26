@@ -754,11 +754,14 @@ class ApiController extends Controller{
     public function disabledLiguiweiTue(){
         //先查出李桂伟的号
         $today = date("Y-m-d");
-        $sql = "select * from zs_visitreal where docid = '67588dfa-9daf-443c-8b0e-33647895106e' and visitdate >'{$today}' and week != 2";
+        $sql = "select * from zs_visitreal where docid = '67588dfa-9daf-443c-8b0e-33647895106e' and visitdate >'{$today}'";
         $res = M()->query($sql);
         $ids = "";
         if ($res){
             foreach ($res as $re){
+                if ($re['week'] == 2 && $re['apw'] == "A"){
+                    continue;
+                }
                 $ids.= $re['id'].",";
             }
             $ids = rtrim($ids,",");

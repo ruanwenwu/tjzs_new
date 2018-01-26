@@ -185,13 +185,18 @@ class IndexController extends BaseController {
         $start = strtotime(date("Y-m-d")." 07:00:00");
         $end   = strtotime(date("Y-m-d")." 16:45:00");
         $now   = time();
-        if ($now < $start || $now > $end){
-            $this->display("passtime");
-            die;
-        }
+        $todayStart = strtotime(date("Y-m-d"));
+        
+        
         $realid = I("get.visitid"); //注意，这个接的是主键id
         //通过realid获得hid,tpid和realid
         $realInfo = M("visitreal")->where(array("id"=>$realid))->find();
+        $registerDayStart = strtotime($realInfo['visitdate']);
+        $dayInterval = ceil(($registerDayStart - $todayStart)/86400);
+        if (($now < $start || $now > $end) && $dayInterval <3){
+            $this->display("passtime");
+            die;
+        }
         $API = new \Home\Controller\ApiController();
         $res = $API->getRealTypeRemainNum($realInfo['tpid'],$realInfo['hid'],$realInfo['realid']);
         if ($res['result'] == "00000000" && $res['data']['total'] > 0){
