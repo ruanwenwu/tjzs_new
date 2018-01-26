@@ -608,6 +608,8 @@ class ApiController extends Controller{
         $this->syncVisitReal();
         //停掉停了的医生的出诊
         $this->disableDisabledDoctorVisit();
+        //李桂伟医生特殊处理
+        $this->disabledLiguiweiTue();
         //同步七天排班信息
         $this->syncSevendaysAvailable();
         //同步每天排班信息
@@ -742,6 +744,25 @@ class ApiController extends Controller{
             $deptid= $did['deptid'];
             $order = $did['order'];
             $sql = "update zs_docanddep set ordernum = '$order' where docid = '$docid' and deptid = '$deptid'";
+            M()->execute($sql);
+        }
+    }
+    
+    /**
+     * disabled掉李桂伟医生非周二的号
+     */
+    public function disabledLiguiweiTue(){
+        //先查出李桂伟的号
+        $today = date("Y-m-d");
+        $sql = "select * from zs_visitreal where docid = '67588dfa-9daf-443c-8b0e-33647895106e' and visitdate >'{$today}' and week != 2";
+        $res = M()->query($sql);
+        $ids = "";
+        if ($res){
+            foreach ($res as $re){
+                $ids.= $re['id'].",";
+            }
+            $ids = rtrim($ids,",");
+            $sql = "update zs_visitreal set isenabled = 0 where id in ({$ids})";
             M()->execute($sql);
         }
     }

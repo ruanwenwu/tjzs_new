@@ -9,10 +9,10 @@ class IndexController extends BaseController {
     public function index(){
         header("Content-type:text/html;charset=utf-8");
         //如果非白名单用户，直接输出模板
-        if(!in_array($this->userInfo['id'],array(10,61,52,12,14,18,19,54,11,57,20,22,60))){
+        /*if(!in_array($this->userInfo['id'],array(10,61,52,12,14,18,19,54,11,57,20,22,60))){
             $this->display("maintaining");
             die;
-        }
+        }*/
         
         //如果有子院区
         $yuan = M("yuan")->where(array("hid"=>1))->order("id desc,enabled desc")->select();
@@ -361,9 +361,9 @@ class IndexController extends BaseController {
      */
     public function appointTips(){
         $guahao = array(
-            "1.可预约7日内号源，早7点至前一天17：00，就诊日取号时支付费用。",
-            "2.取号时间上午7：00可取8：00-9：00预约号，下午12:00可取13：00-14：30预约号，其他时间短提前30分钟取号。",
-            "3.退号时间为就诊前17：00前办理。",
+            "1.可预约7日内号源，早7点至前一天16：50，就诊日取号时支付费用。",
+            "2.取号时间上午7：00可取8：00-9：00预约号，下午12:00可取13：00-14：30预约号，其他时间段提前30分钟取号。",
+            "3.退号时间以就诊时间算起，至少提前一天，17:00之前。",
             "4.违约处罚，1个月爽约3次将取消当月预约资格。",
         );
         $this->assign("guahao",$guahao);
