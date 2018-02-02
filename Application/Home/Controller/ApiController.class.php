@@ -400,14 +400,19 @@ class ApiController extends Controller{
         $hid         = I("post.hid");
         $phoneno     = I("post.phoneno");
         $idcard      = I("post.idcard");
+        $gidcard      = I("post.gidcard");
         $uid         = I("post.uid");
         $periodname  = I("post.periodname");
         //$gidcard     = I("post.gidcard");
         $patientName = I("post.patientname");
         $patientSex  = I("post.patientsex");
+        if (!(int)$patientSex){
+            $patientSex = 2;
+        }
         $realid      = I("post.realid");
         $periodid    = I("post.periodid");
         $verifyCode    = I("post.verifycode");
+        $patientId     = I("post.patientid");
         $accessTokenInfo = $this->getPermitionParams();
         $url = self::API_HOST."api/buss/appoint";
         $data = array(
@@ -415,12 +420,16 @@ class ApiController extends Controller{
             'HID'         =>  $hid,
             'PhoneNo'     =>  $phoneno,
             'IDCard'      =>  $idcard,
+
             'PatientName' =>  $patientName,
             'PatientSex'  =>  $patientSex,
             'RealID'      =>  $realid,
             'PeriodID'    =>  $periodid,
             'VerifyCode'  =>  $verifyCode,
         );
+        if ($gidcard){
+            $data['GIDcard'] = $gidcard;
+        }
         //echo '<pre>';
         //var_dump($data);die;
         $data = http_build_query($data);
@@ -438,7 +447,7 @@ class ApiController extends Controller{
             //如果失败，记录失败原因
         }
         //写入挂号记录
-        $logSql = "insert into `zs`.`zs_appointlog` ( `hid`, `realid`, `uid`, `tpid`, `ctime`,`period`,`status`,`appointcode`) values ( '$hid', '$realid', '$uid', '$tpid', '{$_SERVER['REQUEST_TIME']}','$periodname',$status,'$appointCode')";
+        $logSql = "insert into `zs`.`zs_appointlog` ( `hid`, `realid`, `uid`, `tpid`, `ctime`,`period`,`status`,`appointcode`,`patientid`) values ( '$hid', '$realid', '$uid', '$tpid', '{$_SERVER['REQUEST_TIME']}','$periodname',$status,'$appointCode','$patientId')";
         M("appointlog")->execute($logSql); 
         $id = M("appointlog")->getLastInsID();
         M("appointdetail")->add(array("appointid"=>$id,"message"=>$res['message'],"data"=>serialize($data)));
@@ -767,6 +776,72 @@ class ApiController extends Controller{
             $ids = rtrim($ids,",");
             $sql = "update zs_visitreal set isenabled = 0 where id in ({$ids})";
             M()->execute($sql);
+        }
+    }
+    
+    public function testu(){
+        $str = 's:281:"TPID=87c6024c-4d5b-4bff-9aa8-68f7bce38938&HID=f3be0033-5684-476c-929c-09021cf857ff&PhoneNo=15901173164&IDCard=429006198604153616&GIDCard=429006198604153616&PatientName=%E9%98%AE%E6%96%87%E6%AD%A6&PatientSex=1&RealID=e458964f-865c-4dc4-8626-b3fa16826deb&PeriodID=0&VerifyCode=516668";';
+        die(unserialize($str));
+    }
+    
+    /**
+     * 挂号记录中同步用户的patientid
+     */
+    public function asyncUserAppointLogPatientid(){
+        //遍历appointlog
+        //通过uid查找patientid，更新进去
+        $appoints = M("appointlog")->select();
+        foreach ($appoints as $ap){
+            $apid = $ap['id'];
+            $uid  = $ap['uid'];
+            $pa = M("patient")->where("uid='$uid'")->find();
+            $patientid = $pa['id'];
+            $sql = "update zs_appointlog set patientid = '{$patientid}' where id = '$apid'";
+            M("appointlog")->execute($sql);
+        }
+    }
+    
+    /**
+     * 把用户信息同步到patien表中
+     */
+    public function ayncUserInfoToPatien(){
+        //选择所有用户表里有电话，身份证，姓名，性别和年龄通过算法算出来
+        $users = M("user")->where("gidcard != '' and phoneno != '' and patientname != ''")->select();
+        $sql = "insert into zs_patient (uid,idcard,name,phone,sex,age) values ";
+        $pattern = "/^(\d{6})(\d{4})(\d{2})(\d{2})(\d)(\d{2})([0-9]|X)$/";
+        $nowYear = date("Y");
+        if ($users){
+            foreach ($users as $user){
+                $uid = $user['id'];
+                $idcard = $user['gidcard'];
+                $phone  = $user['phoneno'];
+                $name   = $user['patientname'];
+                
+                preg_match($pattern,$user['gidcard'],$res);
+
+                $sexF = (int)$res[5];
+
+                $sex    = $sexF%2 == 0 ? '0' : '1';
+                $age    = $nowYear - $res[2];
+                $sql .= "('{$uid}','{$idcard}','{$name}','{$phone}','{$sex}','{$age}'),";
+            }
+            $sql = rtrim($sql,",");
+            M("patient")->execute($sql);
+        }
+    }
+    
+    /**
+     * 修改性别-17号代表性别
+     */
+    public function alterSexPatient(){
+        $users = M("patient")->select();
+        foreach($users as $user){
+            $id = $user['id'];
+            $cid = trim($user['idcard']);
+            $sexF = substr($cid,16,1);
+            $sex = $sexF%2 == 0 ? 0 : 1;
+            $sql = "update zs_patient set sex = '$sex' where id = '$id'";
+            M("patient")->execute($sql);
         }
     }
     

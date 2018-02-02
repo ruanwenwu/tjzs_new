@@ -23,7 +23,8 @@
 .cb{padding:10px 10px 50px 10px;text-align:justify}
 .cb p{line-height:30px;margin-top:15px;}
 .btn{
-	width: 30%;
+	width: 40%;
+    margin: 10px;
     padding: 10px;
     box-shadow: none;
     border: none;
@@ -37,26 +38,20 @@
 .yellow{
 	background:orange;
 }
-.green{
-	background:green;
-}
 .float_bottom{
 	text-align:center;
 	position:fixed;
 	bottom:0;
 	width:100%;
-	padding-bottom:10px;
 }
 </style>
 </head>
 <body>
 <div class="cb">
-	<img style="width:100%;" src="/tjimg/hospitalpic.png"/>
 	{$hospital['brief']}
 </div>
 <div class="float_bottom">
 	<input onclick="location.href='/index.php/Home/Index/departBriefList'" type="button" class="btn dark" value="查看科室" />
-	<input onclick="location.href='/'" type="button" class="btn green" value="预约挂号" />
 	<input onclick="location.href='/index.php/Home/Index/busPath'" type="button" class="btn yellow" value="查看路线" />
 </div>
 <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>

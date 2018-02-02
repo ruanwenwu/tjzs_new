@@ -1,6 +1,6 @@
 <?php
 namespace Home\Controller;
-class IndexController extends BaseController {
+class IndexpatchController extends BaseController {
     public function __construct(){
         parent::__construct();
     }
@@ -46,6 +46,11 @@ class IndexController extends BaseController {
     //院区列表
     public function yuanlist(){
         $this->display();
+    }
+    
+    //选择就诊人
+    public function choosePatient(){
+        
     }
 
     //科室出诊信息
@@ -220,25 +225,68 @@ class IndexController extends BaseController {
         $this->assign("visitTypeInfo",$visitTypeInfo);
         $this->display();
     }
+    
+    //选择就诊人
+    public function addpatient(){
+        $userInfo = $this->userInfo;
+        $uid = $userInfo['id'];
+        $realId =I("get.realid");
+        $perioId=I("get.peroid");
+        $periodName =I("get.periodname");
+        $res = M("patient")->where("uid={$uid}")->select();
+        $backUrl = urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+        $jumpUrl = "http://www.tjzsyl.com/index.php/Home/Userpatch/bind?backurl={$backUrl}";
+        //查询是否有绑定患者，如果没有跳转到绑定界面
+        if (!$res){
+            
+            
+            header("Location:{$jumpUrl}");
+            die;
+        }else{
+            $this->assign("realId",$realId);
+            
+            $this->assign("perioId",$perioId);
+            $this->assign("periodName",$periodName);
+            foreach ($res as &$re){
+                $sex = (int)$re['sex'];
+                if ($sex%2==0){
+                    $re['sex'] = "女";
+                }else{
+                    $re['sex'] = "男";
+                }
+                
+                if ($re['age'] < 18 && !$re['gidcard']){
+                    $jumpUrl = $jumpUrl."&patientid={$re['id']}";
+                }else{
+                    $jumpUrl = "/index.php/Home/Indexpatch/preorder/realid/{$realId}/peroid/{$perioId}/periodname/{$periodName}/patientid/{$re['id']}";
+                }
+                $re['jumpurl'] = $jumpUrl;
+                
+                //隐藏身份证号中间的数字
+                $re['idcard'] = substr_replace($re['idcard'], "******", 3,12);
+            }
+            $this->assign("patientInfo",$res);
+            $this->assign("backUrl",$backUrl);
+        //如果有显示列表
+            $this->display();
+        }
+    }
+    
+    //确认预约
+    public function confirmReg(){
+        $this->display();
+    }
 
     //订单预处理,提交订单
     public function preorder(){
         $realid = I("get.realid");
         $period = I("get.peroid");
         $periodName = I("get.periodname");
+        $patientId  = I("get.patientid");
         //获得用户信息,看是否有绑定手机号
         $userId = cookie("userid");
         //$userId = "o4d8FwnnbIQoZlzdkmdqwJbl9J38";
-        $userInfo = M("user")->where(array("openid"=>$userId))->find();
-        $bind = 1;
-        $this->assign("bind",$bind);
-
-        if (!$userInfo['phoneno'] || !$userInfo['gidcard'] || !$userInfo['patientname']) {
-            $bind = 0;
-            $this->assign("bind",$bind);
-        }
-        $backUrl = urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-        
+        $userInfo = M("patient")->find($patientId); //这个其实是患者信息了
         //获取挂号信息，根据realid，这个也是主键
         $realInfo = M("visitreal")->where(array("id"=>$realid))->find();        
         //获得号别信息
@@ -248,32 +296,24 @@ class IndexController extends BaseController {
         //得到科室信息
         $deptInfo = M("department")->where(array("deptid"=>$realInfo['deptid']))->find();
        
-        $this->assign("backUrl",$backUrl);
         $this->assign("userInfo",$userInfo);
         $this->assign("deptInfo",$deptInfo);
         $this->assign("docInfo",$docInfo);
         $this->assign("visitTypeInfo",$visitTypeInfo);
         $this->assign("realInfo",$realInfo);
         $this->assign("periodName",$periodName);
-        $this->assign("periodId",$period);
-
-        if ($bind){
-            
-            //获取验证码
-            $API = new \Home\Controller\ApiController();
-            $img = $API->getVerifyCode($realInfo['tpid'],$userInfo['phoneno']);
-            if ($img){
-                $img = "data:image/gif;base64,".$img;
-                $this->assign("vcode",$img);
-            }
-
-            //获取科室信息
-
-            
-            $this->display();
-        } else {
-            $this->display();   
+        $this->assign("periodId",$period);           
+        //获取验证码
+        $API = new \Home\Controller\ApiController();
+        $img = $API->getVerifyCode($realInfo['tpid'],$userInfo['phone']);
+        if ($img){
+            $img = "data:image/gif;base64,".$img;
+            $this->assign("vcode",$img);
         }
+
+        //获取科室信息        
+        $this->display();
+
     }
 
     //查看详情
@@ -283,8 +323,9 @@ class IndexController extends BaseController {
         $appointId = I("get.appointId");
         $periodName = I("get.periodname");
         $appointCode = I("get.appointcode");
-        $userId = cookie("userid");    
-        $userInfo = M("user")->where(array("openid"=>$userId))->find();
+        $useri = $this->userInfo;
+        
+        $userInfo = M("patient")->where(array("uid"=>$useri['id']))->find();
         //获取挂号信息，根据realid，这个也是主键
         if (!$realid && !$period && !$periodName && ($appointId || $appointCode)){
             //通过appointId获取period和periodName
