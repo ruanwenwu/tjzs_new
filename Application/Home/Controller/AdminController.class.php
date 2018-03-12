@@ -2,7 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class AdminController extends Controller{
+class AdminController extends BaseController{
     public function alterDocInterface(){
         $doctorname = I("get.doctorname");
         if ($doctorname){
@@ -16,6 +16,10 @@ class AdminController extends Controller{
             
         }
         
+        $this->display();
+    }
+    
+    public function appointLog(){
         $this->display();
     }
 }

@@ -1,1 +1,43 @@
-1
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>选择/添加就诊人-天津中医药大学第一附属医院</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+<link rel="stylesheet" href="//cdn.bootcss.com/weui/0.4.0/style/weui.min.css">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="/app/css/timespan.css" rel="stylesheet">
+</head>
+<body>
+<foreach name="patientInfo" item="vo">
+<a class="weui_cell" href="{$vo['jumpurl']}" _v-a7d1e320="">
+<div class="weui_cell_hd" _v-a7d1e320="">
+
+	<img style="width:30px;padding:10px" src="/tjimg/zoler_50.jpg" />
+
+</div>
+<div class="weui_cell_bd weui_cell_primary" _v-a7d1e320="">
+	<p _v-a7d1e320="" style="color:black">
+		{$vo['name']}       &nbsp;&nbsp;{$vo['sex']}        &nbsp;&nbsp;{$vo['age']}岁
+	</p>
+
+	<p><span style="color:gray;font-size:12px;">身份证号：{$vo['idcard']}</span></p>
+</div>  
+
+<div class="weui_cell_ft" _v-a7d1e320="">
+<a href="javascript:;">删除该就诊人</a>  
+</div>
+</a>
+</foreach>
+<a href="/index.php/Home/Userpatch/bind?backurl={$backUrl}" style="margin:10px 8px" id="confirmRegister" class="weui_btn weui_btn_primary" _v-0be13b8c="">添加就诊人</a>
+
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+</body>
+</html>

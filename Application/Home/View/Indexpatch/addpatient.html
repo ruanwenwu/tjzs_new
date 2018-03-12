@@ -30,13 +30,32 @@
 
 	<p><span style="color:gray;font-size:12px;">身份证号：{$vo['idcard']}</span></p>
 </div>  
-
-<div class="weui_cell_ft" _v-a7d1e320="">
+<if condition="$showdel">
+<div style="color:white;background:blue;height:48px;padding:0 10px;line-height:48px;border-radius:10px;font-size:20px;" class="weui_cell_ft" _v-a7d1e320="">
+修改
 </div>
+<div style="color:white;background:red;height:48px;padding:0 10px;margin:0 10px;line-height:48px;border-radius:10px;font-size:20px;" onclick="delPatient('{$vo['id']}',this);return false;" class="weui_cell_ft" _v-a7d1e320="">
+删除
+</div>
+</if>
 </a>
 </foreach>
 <a href="/index.php/Home/Userpatch/bind?backurl={$backUrl}" style="margin:10px 8px" id="confirmRegister" class="weui_btn weui_btn_primary" _v-0be13b8c="">添加就诊人</a>
-
 <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script>
+function delPatient(pid,obj){
+	if (!pid){
+		return false;
+	}
+	var url = "/index.php/Home/Userpatch/delpatient";
+	$.post(url,{pid:pid},function(data){
+		if (data.code == "1"){
+			$(obj).html("已删除");
+		}else{
+			$(obj).html("删除失败");
+		}
+	},'json')
+}
+</script>
 </body>
 </html>

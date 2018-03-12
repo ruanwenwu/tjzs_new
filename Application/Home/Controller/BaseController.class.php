@@ -15,7 +15,7 @@ class BaseController extends Controller {
             $this->assign("userInfo", $userInfo);
         }
 
-        if (!$userid || !$userInfo ) {
+        if (!$userid || !$userInfo) {
             //记录授权前的地址
             $host = $_SERVER['HTTP_HOST'];
             $uri = $_SERVER['REQUEST_URI'];

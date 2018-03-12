@@ -1,0 +1,39 @@
+<extend name="Base:public" />
+<block name="content">
+<div class="weui-cells weui-cells_form">
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">开始日期</label></div>
+    <div class="weui-cell__bd">
+      <input  type="text" class="cc weui-input" placeholder="请选择日期">
+    </div>
+  </div>
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="my-input weui-label">结束日期</label></div>
+    <div class="weui-cell__bd">
+      <input type="text" class="cc weui-input" placeholder="请选择日期">
+    </div>
+  </div>
+</div>
+<div class="weui-cells">
+  <a class="weui-cell weui-cell_access" href="javascript:;">
+    <div class="weui-cell__bd">
+      <p>cell standard</p>
+    </div>
+    <div class="weui-cell__ft">
+    </div>
+  </a>
+  <a class="weui-cell weui-cell_access" href="javascript:;">
+    <div class="weui-cell__bd">
+      <p>cell standard</p>
+    </div>
+    <div class="weui-cell__ft">
+    </div>
+  </a>
+</div>
+</block>
+<block name="script">
+<script>
+	$(".cc").calendar();
+</script>
+
+</block>

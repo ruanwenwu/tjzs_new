@@ -237,6 +237,11 @@ class IndexpatchController extends BaseController {
         $backUrl = urlencode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
         $jumpUrl = "http://www.tjzsyl.com/index.php/Home/Userpatch/bind?backurl={$backUrl}";
         //查询是否有绑定患者，如果没有跳转到绑定界面
+        if ($realId){
+            $this->assign("showdel",false);
+        }else{
+            $this->assign("showdel",true);
+        }
         if (!$res){
             
             
@@ -258,7 +263,11 @@ class IndexpatchController extends BaseController {
                 if ($re['age'] < 18 && !$re['gidcard']){
                     $jumpUrl = $jumpUrl."&patientid={$re['id']}";
                 }else{
-                    $jumpUrl = "/index.php/Home/Indexpatch/preorder/realid/{$realId}/peroid/{$perioId}/periodname/{$periodName}/patientid/{$re['id']}";
+                    if ($realId){
+                        $jumpUrl = "/index.php/Home/Indexpatch/preorder/realid/{$realId}/peroid/{$perioId}/periodname/{$periodName}/patientid/{$re['id']}";
+                    }else{
+                        $jumpUrl = $jumpUrl."&patientid={$re['id']}";
+                    }
                 }
                 $re['jumpurl'] = $jumpUrl;
                 
@@ -283,6 +292,7 @@ class IndexpatchController extends BaseController {
         $period = I("get.peroid");
         $periodName = I("get.periodname");
         $patientId  = I("get.patientid");
+
         //获得用户信息,看是否有绑定手机号
         $userId = cookie("userid");
         //$userId = "o4d8FwnnbIQoZlzdkmdqwJbl9J38";

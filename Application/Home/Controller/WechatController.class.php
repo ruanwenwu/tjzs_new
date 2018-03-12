@@ -45,7 +45,7 @@ class WechatController extends Controller{
                     $accessToken = $accessTokenArr['access_token'];
                     $userInfoUrl = "https://api.weixin.qq.com/sns/userinfo?access_token={$accessToken}&openid={$openid}&lang=zh_CN";
                     $userInfo = json_decode(file_get_contents($userInfoUrl),true);
-                    if ($userInfo){
+                    if ($userInfo && $userInfo['openid']){
                         $userIfExists = $this->userObj->userIfExists($openid);
                         if (!$userIfExists){
                             unset($userInfo['privilege']);
@@ -57,6 +57,11 @@ class WechatController extends Controller{
                         //如果没有  
                         header("Location:http://$backurl");
                         die;
+                    }else{
+                        $backurl = cookie("auth_back_url");
+                        cookie("auth_back_url",null);
+                        //如果没有
+                        header("Location:http://$backurl");
                     }
                 } else {
                     echo $accessTokenArr['errorcode'];

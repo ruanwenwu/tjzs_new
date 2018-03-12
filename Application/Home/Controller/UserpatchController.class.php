@@ -38,7 +38,7 @@ class UserpatchController extends BaseController {
             "uid"    => $uid,
             "sex"    => $sex,
             "age"    => I("post.age")
-        );
+        );    
         //先查看这个身份证号是否已经注册过
        $gres = M("patient")->where(array("idcard"=>$idcard))->find();
        if ($patientId){       
@@ -54,6 +54,27 @@ class UserpatchController extends BaseController {
        } 
        $return = array("code"=>1,"message"=>"成功");
        $this->ajaxReturn($return);
+    }
+
+    public function delpatient(){
+        $pid = I("post.pid");
+        if (!$pid){
+            $return = array("code"=>0,"message"=>"参数错误");
+            $this->ajaxReturn($return);
+        }
+
+        $pinfo = M("patient")->where(array("id"=>$pid))->find();
+        if (!$pinfo){
+            $return = array("code"=>0,"message"=>"用户不存在");
+            $this->ajaxReturn($return);
+        }
+
+        if(M("patient")->delete($pid)){
+            $return = array("code"=>1,"message"=>"删除成功");
+        }else{
+            $return = array("code"=>0,"message"=>"系统错误");
+        }
+        $this->ajaxReturn($return);
     }
     
 }
