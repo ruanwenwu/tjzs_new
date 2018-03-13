@@ -408,6 +408,7 @@ class IndexpatchController extends BaseController {
             $re['docInfo'] = $doctorInfo = M("doctor")->where(array("docid"=>$realInfo['docid']))->find();
             $re['deptInfo'] = M("department")->where(array("deptid"=>$realInfo['deptid']))->find();
         }
+        $this->assign("userInfo",$userInfo);
         $this->assign("timeSpan",$res);
         $this->display();
     }

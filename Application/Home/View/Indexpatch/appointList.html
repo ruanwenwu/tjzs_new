@@ -58,11 +58,18 @@
 					<img src="/Images/boc.png" style="height:18px;width:auto;">中国银行;技术支持：倍康益众
 				</div>-->
 				<div style="height:8px;">
+				<if condition="$userInfo['id'] eq 12">
+				<p class="weui-btn-area">
+      <a href="/index.php/Home/Admin/appointLog" class="weui-btn weui-btn_primary">查看预约情况</a>
+    </p></if>
 				</div>
 				<!--fragment-end--><!--v-partial-->
 			</div>
 		</div>
 	</div>
+	 <div class="weui-msg__opr-area">
+    
+  </div>
 	<!--v-component-->
 	<div class="weui_dialog_alert" style="display: none;">
 		<div class="weui_mask">
