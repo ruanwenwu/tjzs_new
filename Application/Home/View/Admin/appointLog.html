@@ -1,39 +1,108 @@
 <extend name="Base:public" />
+<block name="css">
+<style>
+.contew{position:absolute;width:100%;top:216px;bottom:0;overflow:scroll}
+</style>
+</block>
 <block name="content">
 <div class="weui-cells weui-cells_form">
   <div class="weui-cell">
     <div class="weui-cell__hd"><label class="weui-label">开始日期</label></div>
     <div class="weui-cell__bd">
-      <input  type="text" class="cc weui-input" placeholder="请选择日期">
+      <input value="{$startday}" id="startday"  type="text" class="cc weui-input" placeholder="请选择日期">
     </div>
   </div>
   <div class="weui-cell">
     <div class="weui-cell__hd"><label class="my-input weui-label">结束日期</label></div>
     <div class="weui-cell__bd">
-      <input type="text" class="cc weui-input" placeholder="请选择日期">
+      <input id="endday" value="{$endday}" type="text" class="cc weui-input" placeholder="请选择日期">
     </div>
   </div>
 </div>
-<div class="weui-cells">
+<p class="weui-btn-area">
+<a href="javascript:;" id="check" class="weui-btn weui-btn_primary">查询</a>
+</p>
+ <div class="weui-form-preview__hd">
+    <label class="weui-form-preview__label">预约人数：</label>
+    <em class="weui-form-preview__value">{$total}人</em>
+  </div>
+<div class="weui-cells contew" id="scroll-containerx">
+<foreach name="data" item="vo">
   <a class="weui-cell weui-cell_access" href="javascript:;">
     <div class="weui-cell__bd">
-      <p>cell standard</p>
+      <p>{$vo['deptInfo']['deptname']}</p>
     </div>
     <div class="weui-cell__ft">
+    {$vo['docInfo']['doctorname']}
     </div>
   </a>
-  <a class="weui-cell weui-cell_access" href="javascript:;">
-    <div class="weui-cell__bd">
-      <p>cell standard</p>
-    </div>
-    <div class="weui-cell__ft">
-    </div>
-  </a>
+</foreach>
+<div id="loadmoreb" class="weui-loadmore" style="display:none;">
+  <i class="weui-loading"></i>
+  <span class="weui-loadmore__tips">正在加载</span>
+</div>
 </div>
 </block>
 <block name="script">
 <script>
-	$(".cc").calendar();
+	$(".cc").datetimePicker();
+	$("#check").click(function(){
+		var startday = $("#startday").val();
+		var endday   = $("#endday").val();
+		if (!startday){
+			alert("请选择开始时间");
+			return false;
+		}
+		
+		if (!endday){
+			alert("请选择结束时间");
+			return false;
+		}
+		
+		startdayT = get_unix_time(startday);
+		enddayT   = get_unix_time(endday);
+		if (startdayT > enddayT){
+			alert("开始时间不能大于结束时间");
+			return false;
+		}
+		
+		location.href = "/index.php/Home/Admin/appointLog/startday/"+startday+"/endday/"+endday;
+	    
+	});
+	
+	function get_unix_time(dateStr)
+	{
+		return Date.parse(new Date(dateStr));
+
+	}
+	
+	var loadMoreS = true;
+	var page = 1;
+	var holeS = true;
+	$("#scroll-containerx").scroll(function(){
+		var scrTop = $(this).scrollTop();
+		var sHeight= $(this).height();
+		var aNum   = $(this).find("a").length;
+		var aHeight= $(this).find("a").eq(0).outerHeight();
+		var docHeight = Math.ceil(aNum * aHeight);
+		console.log(scrTop+'-'+sHeight+'-'+aNum+'-'+docHeight);
+		if(scrTop + sHeight > docHeight - 50 && loadMoreS && holeS){
+			page++;
+			$(".weui-loadmore").show();
+			loadMoreS = false;
+			//加载数据
+			var dat = {startday:$("#startday").val(),endday:$("#endday").val(),page:page};
+			$.get("/index.php/Home/Admin/appointLogForAjax",dat,function(res){
+				$(".weui-loadmore").hide();
+				if(res.status){
+					$("#loadmoreb").before(res.data);
+				}else{
+					holeS = false;
+				}
+				loadMoreS = true;
+			},'json');
+		}
+	});
 </script>
 
 </block>
